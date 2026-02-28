@@ -16,6 +16,26 @@ img {vertical-align: middle;}
   object-fit: cover;
 }
 
+/* ===== RESPONSIVE NAVBAR ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .navbar li a {
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    max-height: none;
+  }
+}
+
 .active {
   background-color: #717171;
 }
