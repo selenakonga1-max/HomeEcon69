@@ -42,7 +42,9 @@ li {
 }
 
 /* Equal left & right spacing */
-.card {
+.card,
+.leftcolumn,
+.row {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -57,7 +59,9 @@ li {
 }
 
 .card {
-  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .active {
@@ -362,6 +366,33 @@ li {
   }
 }
 
+.card,
+.leftcolumn,
+.row {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 769px) {
+  p, li {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+  
+.navbar li {
+  width: 100%;
+}
+
+.navbar li a {
+  text-align: center;
+}
+
+.dropdown-menu {
+  position: static;
+  max-height: none;
+}
+}
 
 
 
