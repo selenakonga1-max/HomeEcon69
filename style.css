@@ -36,21 +36,6 @@ img {vertical-align: middle;}
   }
 }
 
-/* ===== RESPONSIVE NAVBAR ===== */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  /* Fix word spacing issue on mobile */
-@media (max-width: 768px) {
-  p, li {
-    text-align: left;
-    text-justify: auto;
-    word-spacing: normal;
-  }
-}
-
 ol {
   padding-left: 20px;
 }
@@ -386,6 +371,17 @@ li {
 .thumb:hover {
   opacity: 1;
   border: 2px solid #0C3D7A;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  p, li {
+    text-align: left;
+    word-spacing: normal;
+  }
 }
 
 
