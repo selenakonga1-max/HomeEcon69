@@ -41,31 +41,8 @@ li {
   line-height: 1.6;
 }
 
-  @media (min-width: 769px) {
-  p, li {
-    text-align: justify;
-    text-justify: inter-word;
-  }
-}
-  
-  .navbar li {
-    width: 100%;
-  }
-
-  .navbar li a {
-    text-align: center;
-  }
-
-  .dropdown-menu {
-    position: static;
-    max-height: none;
-  }
-}
-
 /* Equal left & right spacing */
-.card,
-.leftcolumn,
-.row {
+.card {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -80,11 +57,8 @@ li {
 }
 
 .card {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
-
 
 .active {
   background-color: #717171;
@@ -167,6 +141,13 @@ li {
   padding: 0;
   background-color: #0b0fbf; /* dark blue like your screenshot */
   display: flex;
+}
+
+@media (min-width: 769px) {
+  p, li {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 /* Navbar items */
