@@ -42,6 +42,30 @@ img {vertical-align: middle;}
     flex-direction: column;
   }
 
+  /* Fix word spacing issue on mobile */
+@media (max-width: 768px) {
+  p, li {
+    text-align: left;
+    text-justify: auto;
+    word-spacing: normal;
+  }
+}
+
+ol {
+  padding-left: 20px;
+}
+
+li {
+  line-height: 1.6;
+}
+
+  @media (min-width: 769px) {
+  p, li {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+  
   .navbar li {
     width: 100%;
   }
