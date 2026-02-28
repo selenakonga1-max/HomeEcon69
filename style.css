@@ -388,16 +388,6 @@ li {
   border: 2px solid #0C3D7A;
 }
 
-/* Fix right-side spacing for Quality Objectives on mobile */
-@media (max-width: 768px) {
-  .card {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 
-  ol {
-    padding-right: 16px;
-  }
-}
 
 
