@@ -80,6 +80,30 @@ li {
   }
 }
 
+/* Equal left & right spacing */
+.card,
+.leftcolumn,
+.row {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.card {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .active {
   background-color: #717171;
 }
