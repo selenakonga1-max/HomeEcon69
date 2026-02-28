@@ -29,11 +29,17 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 
-.slideshow-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.slideshow-container {
+  width: 100%;
+  height: 300px;      /* fixed normal height */
+  max-height: 40vh;   /* prevents it from becoming too tall */
+  overflow: hidden;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .founder-section {
@@ -340,3 +346,4 @@ img {
     font-size: 16px;
   }
 }
+
