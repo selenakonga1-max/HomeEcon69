@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoGallery</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 0px;
+  background:#0C3D7A;
+}
+
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  background-color: white;
+}
+
+/* Style the topnav links */
+.topnav a {
+  display: block;
+  color: #0C3D7A;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #0C3D7A;
+  color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+  color: white;
+  margin-left: 0%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 0%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: Arial;
+  color: #0C3D7A;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: right;
+  background: white;
+  margin-top: 10px;
+}
+
+.footer h3{
+  text-align: left;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="1.jpg"style="width: 1500px"; height="500px";>
+</div>
+
+<div class="mySlides fade">
+  <img src="2.jpg"style="width: 1500px"; height="500px";>
+</div>
+
+<div class="mySlides fade">
+  <img src="3.jpg"style="width: 1500px"; height="500px";>
+</div>
+
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let headerIndex = 0;
+showHeaderSlides();
+
+function showHeaderSlides() {
+  let i;
+  let slides = document.getElementsByClassName("headerSlide");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  headerIndex++;
+  if (headerIndex > slides.length) {
+    headerIndex = 1;
+  }
+
+  slides[headerIndex - 1].style.display = "block";
+
+  setTimeout(showHeaderSlides, 3000);
+}
+</script>
+
+</div>
+
+<div class="topnav">
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About LCBA</a>
+        <ul class="dropdown-menu">
+          <li><a href="Founder.html">The Founder</a></li>
+          <li><a href="PVM.html">Philosophy, Vision, Mision</a></li>
+          <li><a href="CoreValues.html">Core Values</a></li>
+          <li><a href="QOs.html">Quality Objectives</a></li>
+        </ul>
+      </li>
+      <li><a href="AboutHE.html">Home Economics</a></li>
+      <li><a href="PhotoGallery.html">Picture Gallery</a></li>
+      <li><a href="VideoGallery.html">Video Gallery</a></li>
+        <li style="margin-left:auto;">
+          <a href="Game.html">Games</a>
+        </li>
+    </ul>
+  </nav>
+</div>  
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <div class="gallery-container">
+
+      <!-- Full Image -->
+      <div class="gallery-slide">
+        <img id="mainImage" src="bev1.jpg">
+        <div class="caption-bar" id="captionText">Beverage 1</div>
+      </div>
+
+      <!-- Arrows -->
+      <a class="prev" onclick="changeSlide(-1)">❮</a>
+      <a class="next" onclick="changeSlide(1)">❯</a>
+
+      <!-- Thumbnails -->
+      <div class="thumbnail-row">
+        <img class="thumb active-thumb" src="bev1.jpg" onclick="setSlide(0)" alt="Beverage 1">
+        <img class="thumb" src="bev2.jpg" onclick="setSlide(1)" alt="Beverage 2">
+        <img class="thumb" src="bev3.jpg" onclick="setSlide(2)" alt="Beverage 3">
+        <img class="thumb" src="house1.jpg" onclick="setSlide(3)" alt="House 1">
+        <img class="thumb" src="house2.jpg" onclick="setSlide(4)" alt="House 2">
+        <img class="thumb" src="house3.jpg" onclick="setSlide(5)" alt="House 3">
+        <img class="thumb" src="bread1.jpg" onclick="setSlide(6)" alt="Bread 1">
+        <img class="thumb" src="bread2.jpg" onclick="setSlide(7)" alt="Bread 2">
+        <img class="thumb" src="bread3.jpg" onclick="setSlide(8)" alt="Bread 3">
+        <img class="thumb" src="cook1.jpg" onclick="setSlide(9)" alt="Cook 1">
+        <img class="thumb" src="cook2.jpg" onclick="setSlide(10)" alt="Cook 2">
+        <img class="thumb" src="cook3.jpg" onclick="setSlide(11)" alt="Cook 3">
+      </div>
+
+    </div>
+
+        <script>
+          let currentIndex = 0;
+
+          const images = [
+            "bev1.jpg","bev2.jpg","bev3.jpg",
+            "house1.jpg","house2.jpg","house3.jpg",
+            "bread1.jpg","bread2.jpg","bread3.jpg",
+            "cook1.jpg","cook2.jpg","cook3.jpg"
+          ];
+
+          const captions = [
+            "Beverage 1","Beverage 2","Beverage 3",
+            "House 1","House 2","House 3",
+            "Bread 1","Bread 2","Bread 3",
+            "Cook 1","Cook 2","Cook 3"
+          ];
+
+          function updateGallery() {
+            document.getElementById("mainImage").src = images[currentIndex];
+            document.getElementById("captionText").innerText = captions[currentIndex];
+
+            let thumbs = document.querySelectorAll(".thumb");
+            thumbs.forEach(t => t.classList.remove("active-thumb"));
+            thumbs[currentIndex].classList.add("active-thumb");
+          }
+
+          function changeSlide(n) {
+            currentIndex += n;
+            if (currentIndex >= images.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            updateGallery();
+          }
+
+          function setSlide(n) {
+            currentIndex = n;
+            updateGallery();
+          }
+        </script>
+  </div>
+</div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer">
+
+</div>
+
+
+</body>
+</html>

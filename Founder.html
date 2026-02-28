@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 0px;
+  background:#0C3D7A;
+}
+
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  background-color: white;
+}
+
+/* Style the topnav links */
+.topnav a {
+  display: block;
+  color: #0C3D7A;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #0C3D7A;
+  color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  width: 100%;
+  color: white;
+  background-image: url("lala.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;   /* Makes it full screen height */
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 0%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: transparent;
+  padding: 20px;
+  margin-top: 20px;
+  font-family: Arial;
+  color: #0C3D7A ;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: right;
+  background: white;
+  margin-top: 10px;
+}
+
+.footer h3{
+  text-align: left;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="1.jpg"style="width: 1500px"; height="500px";>
+</div>
+
+<div class="mySlides fade">
+  <img src="2.jpg"style="width: 1500px"; height="500px";>
+</div>
+
+<div class="mySlides fade">
+  <img src="3.jpg"style="width: 1500px"; height="500px";>
+</div>
+
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+</div>
+
+<div class="topnav">
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">About LCBA</a>
+        <ul class="dropdown-menu">
+          <li><a href="Founder.html">The Founder</a></li>
+          <li><a href="PVM.html">Philosophy, Vision, Mision</a></li>
+          <li><a href="CoreValues.html">Core Values</a></li>
+          <li><a href="QOs.html">Quality Objectives</a></li>
+        </ul>
+      </li>
+      <li><a href="AboutHE.html">Home Economics</a></li>
+      <li><a href="PhotoGallery.html">Picture Gallery</a></li>
+      <li><a href="VideoGallery.html">Video Gallery</a></li>
+        <li style="margin-left:auto;">
+          <a href="Game.html">Games</a>
+        </li>
+    </ul>
+  </nav>
+</div>   
+
+<div class="row">
+  <div class="leftcolumn">
+      <div class="founder-section">
+        <div class="founder-text">
+          <h1 style="color: rgb(0, 0, 146);"><b>The Founder</b></h1>
+          <h4> Pedro Evangelista Llamas was born in Pagsanjan, Laguna on August 01, 1884.
+            Both of his parents,<br> Gabriel Llamas and Eleutera Evangelista were born and raised in the same town too.
+            <br>
+            <br>
+          He studied in St. Joseph Catholic School in Hongkong for two years and continued his education <br>in the United States where he received 
+          his Bachelor of Science in Pharmaceutical Chemistry from<br>the University of Michigan.
+            <br>
+            <br>
+          At the young age of 28, he married Josefa Gomez Francia on August 26, 1912 and was blessed with <br>nine children: Herminio, Guadalupe, Fidel, 
+          Amor, Luis, Jose, Mario, Carlos, and Eva.
+            <br>
+            <br>
+          At 32, he was elected Municipal President of Pagsanjan for four years (1916–1920). He declined to<br> be re-elected to the position, even when 
+          the townspeople wanted him to continue on, due to his<br> health problems.
+            <br>
+            <br>
+          In 1923, he founded the Pagsanjan Academy to serve and augment the lack of schools in his town. <br>Later on, he realized that there was also a 
+          need for secondary schools. Children from Pagsanjan went <br>to Laguna High School in Sta. Cruz, Rural High in Los Banos or in Manila to further 
+          their schooling.<br> However, no one went to Calamba, as there were no secondary schools there. This thought bore fruit <br>and thus, Laguna Institute 
+          was established in 1930. The Laguna Institute flourished amidst the havoc <br>and strife of World War II. It closed down temporarily in 1945 and opened 
+          its doors once again in 1950.
+            <br>
+            <br>
+          Don Pedro Llamas died January 13, 1946 at the age of 61 due to a failing heart condition. His demise <br>was a great loss for his family and to the community. 
+          Nevertheless, his love for the Filipinos of Laguna <br>continued on with the legacy he left with his heirs; and that is of humble servitude exemplified by<br> providing 
+          quality education to the community. He envisioned educating the community and equipping <br>people to become leaders leading them into abundance.
+          </h4>
+        </div>
+  
+        <div class="founder-image">
+          <img src="ped.jpg" alt="Don Pedro">
+          <h4><strong>DON PEDRO E. LLAMAS – THE VISIONARY</strong><br>1884-1946</h4>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+</div>
+
+
+</body>
+</html>
