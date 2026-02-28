@@ -3,17 +3,37 @@ body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
-/* Slideshow container */
+/* ===== HEADER SLIDESHOW SAME SIZE ===== */
+
 .slideshow-container {
-  position: relative;
+  width: 100%;
+  max-width: 1500px;   /* optional */
+  height: 500px;       /* FIXED HEIGHT */
   margin: auto;
+  overflow: hidden;
+}
+
+.mySlides {
+  width: 100%;
+  height: 100%;
 }
 
 .slide-img {
   width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;   /* crops image but keeps aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .slideshow-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshow-container {
+    height: 200px;
+  }
 }
 
 /* ===== RESPONSIVE NAVBAR ===== */
